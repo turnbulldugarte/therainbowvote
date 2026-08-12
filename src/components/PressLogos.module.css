@@ -1,0 +1,78 @@
+.marquee {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.rail {
+  display: flex;
+  width: max-content;
+  animation: marquee 42s linear infinite;
+}
+
+.marquee:hover .rail,
+.marquee:focus-within .rail {
+  animation-play-state: paused;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-right: var(--space-4);
+}
+
+.static {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.tile {
+  flex-shrink: 0;
+  height: 92px;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.tile.solid {
+  padding: var(--space-2);
+  overflow: hidden;
+}
+
+.logo {
+  max-height: 42px;
+  max-width: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.tile.solid .logo {
+  max-height: 76px;
+  max-width: 100%;
+  border-radius: calc(var(--radius-md) - 4px);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rail {
+    animation: none !important;
+  }
+}

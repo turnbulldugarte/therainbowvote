@@ -1,0 +1,169 @@
+.intro {
+  padding-top: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-3);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  grid-column: span 12;
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  border-top: 7px solid var(--accent, var(--purple));
+  box-shadow: var(--shadow-hard-sm);
+  transition: transform 0.18s var(--ease-out), box-shadow 0.18s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
+.watermark {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 130px;
+  height: 130px;
+  color: var(--accent, var(--purple));
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: var(--step-4);
+  color: var(--accent, var(--purple));
+  line-height: 0.9;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  color: var(--accent, var(--purple));
+  flex-shrink: 0;
+}
+
+.label {
+  font-family: var(--font-hand);
+  font-size: var(--step-1);
+  color: var(--ink-soft);
+  display: block;
+}
+
+.title {
+  font-size: var(--step-2);
+  text-transform: none;
+  margin-block: var(--space-1) var(--space-1);
+  line-height: 1.1;
+}
+
+.hook {
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.description {
+  color: var(--ink-soft);
+  font-size: var(--step--1);
+  margin-bottom: 0;
+}
+
+.theme {
+  margin-top: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 46ch;
+}
+
+.circle {
+  width: 70px;
+  height: 34px;
+  color: var(--accent, var(--purple));
+  flex-shrink: 0;
+}
+
+.themeText {
+  font-family: var(--font-hand);
+  font-size: var(--step-2);
+  line-height: 1.15;
+}
+
+.feature {
+  padding: var(--space-4);
+}
+
+.feature .number {
+  font-size: var(--step-6);
+}
+
+.feature .title {
+  font-size: var(--step-4);
+}
+
+.feature .watermark {
+  width: 220px;
+  height: 220px;
+  top: -30px;
+  right: -30px;
+}
+
+.ctaSection {
+  border-top: 2.5px solid var(--ink);
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.ctaTitle {
+  font-size: var(--step-4);
+}
+
+.ctaBody {
+  font-size: var(--step-1);
+  max-width: 50ch;
+}
+
+/* Mobile: every module is full-width and shows complete content (handled above via
+   grid-column: span 12 on .card by default). From this breakpoint up, the hand-tuned
+   mosaic (--span, set inline per module) takes over. */
+@media (min-width: 860px) {
+  .card {
+    grid-column: span var(--span, 12);
+  }
+  .card:not(.feature) .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 860px) {
+  .ctaInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

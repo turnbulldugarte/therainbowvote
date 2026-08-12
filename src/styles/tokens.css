@@ -1,0 +1,51 @@
+:root {
+  /* Brand */
+  --yellow: #e9b404;
+  --yellow-deep: #c99a00;
+  --yellow-pale: #fbe9ae;
+  --ink: #141414;
+  --ink-soft: #3a3630;
+  --paper: #fffcf3;
+  --cream: #fff6de;
+  --line: rgba(20, 20, 20, 0.14);
+
+  /* Accents (sampled from the book's own doodle art — used one at a time) */
+  --pink: #c23272;
+  --purple: #672477;
+  --blue: #0962a5;
+  --green: #3f7a28;
+  --red: #c22014;
+  --orange: #d66300;
+
+  /* Type */
+  --font-display: "Anton", "Arial Narrow", sans-serif;
+  --font-body: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
+  --font-hand: "Caveat", cursive;
+
+  /* Scale */
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem);
+  --step-0: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.4vw, 1.4rem);
+  --step-2: clamp(1.5rem, 1.3rem + 0.8vw, 1.9rem);
+  --step-3: clamp(1.9rem, 1.5rem + 1.6vw, 2.7rem);
+  --step-4: clamp(2.4rem, 1.8rem + 2.6vw, 3.8rem);
+  --step-5: clamp(3rem, 2.1rem + 4vw, 5.4rem);
+  --step-6: clamp(3.6rem, 2.2rem + 6.2vw, 7.6rem);
+
+  /* Space */
+  --space-1: 0.4rem;
+  --space-2: 0.8rem;
+  --space-3: 1.4rem;
+  --space-4: 2.2rem;
+  --space-5: 3.6rem;
+  --space-6: 5.6rem;
+  --space-7: 8.4rem;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --shadow-hard: 6px 6px 0 var(--ink);
+  --shadow-hard-sm: 4px 4px 0 var(--ink);
+
+  --content-max: 1280px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

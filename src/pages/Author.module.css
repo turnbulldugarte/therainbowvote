@@ -1,0 +1,157 @@
+.intro {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+  grid-template-columns: 1fr;
+  padding-block: var(--space-5);
+}
+
+.monogram {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2.5px solid var(--ink);
+  flex-shrink: 0;
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.star {
+  position: absolute;
+  top: -16px;
+  right: -10px;
+  width: 34px;
+  height: 34px;
+  color: var(--pink);
+}
+
+.eyebrow {
+  color: var(--purple);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.name {
+  font-size: var(--step-5);
+  margin-bottom: var(--space-2);
+}
+
+.role {
+  font-size: var(--step-0);
+  color: var(--ink-soft);
+  margin-bottom: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .role {
+    white-space: nowrap;
+  }
+}
+
+.pullQuoteSection {
+  padding-block: var(--space-6);
+}
+
+.pullQuote {
+  font-family: var(--font-hand);
+  font-size: clamp(2rem, 1.4rem + 3.5vw, 4rem);
+  color: var(--yellow);
+  line-height: 1.15;
+  margin: 0;
+  max-width: 16ch;
+}
+
+.body {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+.bodyMain p {
+  max-width: 68ch;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-3);
+  font-size: var(--step-0);
+}
+
+.sidebar {
+  background: var(--paper);
+  border: 2.5px solid var(--ink);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-hard-sm);
+  align-self: start;
+  height: fit-content;
+}
+
+.sidebarIcon {
+  width: 30px;
+  height: 30px;
+  color: var(--blue);
+  margin-bottom: var(--space-2);
+}
+
+.sidebarTitle {
+  font-size: var(--step-1);
+  text-transform: none;
+  margin-bottom: var(--space-2);
+}
+
+.sidebarText {
+  color: var(--ink-soft);
+  font-size: var(--step--1);
+  margin: 0;
+}
+
+.pressSection {
+  text-align: center;
+}
+
+.pressEyebrow {
+  color: var(--purple);
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.ctaSection {
+  border-top: 2.5px solid var(--ink);
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.ctaTitle {
+  font-size: var(--step-4);
+}
+
+@media (min-width: 640px) {
+  .intro {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+@media (min-width: 860px) {
+  .body {
+    grid-template-columns: 2fr 1fr;
+  }
+  .ctaInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
