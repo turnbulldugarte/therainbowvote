@@ -5,10 +5,16 @@ import SectionHeader from "../components/SectionHeader";
 import ChapterTeaserCard from "../components/ChapterTeaserCard";
 import AuthorTeaser from "../components/AuthorTeaser";
 import Endorsements from "../components/Endorsements";
-import { MarkerUnderline, IconBar, IconDonut, IconSearch, IconCheckbox } from "../components/Doodles";
+import {
+  MarkerUnderline,
+  IconBar,
+  IconDonut,
+  IconSearch,
+  IconCheckbox,
+} from "../components/Doodles";
 import { useReveal } from "../hooks/useReveal";
 import { chapters } from "../data/chapters";
-import { SHORT_DESCRIPTION } from "../data/site";
+import { AMAZON_URL, BOOK_TITLE, SHORT_DESCRIPTION } from "../data/site";
 import styles from "./Home.module.css";
 
 const stats = [
@@ -42,7 +48,9 @@ export default function Home() {
           <p className={styles.subtitle}>
             How LGBTQ+ voters think, what they want, and how to win their ballot.
           </p>
-          <p className={styles.lede}>{SHORT_DESCRIPTION}</p>
+          <p className={styles.lede}>
+            <em>{BOOK_TITLE}</em> {SHORT_DESCRIPTION}
+          </p>
           <div className={styles.ctaRow}>
             <PreorderButton />
             <Link to="/chapters" className="btn btn-ghost">
@@ -88,12 +96,29 @@ export default function Home() {
       {/* MID-PAGE CTA */}
       <section className={`section bg-yellow ${styles.midCta}`}>
         <div className={`container ${styles.midCtaInner}`}>
-          <h2 className={styles.midCtaTitle}>Ready for pre-order.</h2>
+          <h2 className={styles.midCtaTitle}>
+            Ready for
+            <br />
+            pre-order.
+          </h2>
           <p className={styles.midCtaBody}>
-            The Rainbow Vote is available to pre-order now from Gay's the Word bookshop,
-            via Bookshop.org.
+            The Rainbow Vote is available to pre-order now from Gay's the Word bookshop
+            via Bookshop.org, or from Amazon.
           </p>
-          <PreorderButton variant="invert" />
+          <div className={styles.midCtaButtons}>
+            <div className={styles.annotatedButton}>
+              <span className={styles.annotation}>
+                Purchasing here supports local bookstores :)
+              </span>
+              <PreorderButton variant="invert" />
+            </div>
+            <PreorderButton
+              variant="ghost"
+              href={AMAZON_URL}
+              destinationName="Amazon"
+              label="Pre-order on Amazon"
+            />
+          </div>
         </div>
       </section>
 

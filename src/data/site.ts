@@ -1,6 +1,12 @@
 export const BOOKSHOP_URL =
   "https://uk.bookshop.org/p/books/the-rainbow-vote-how-lgbtq-voters-think-what-they-want-and-how-to-win-their-ballot-stuart-j-turnbull-dugarte/1db77d61749ec5ee?ean=9780691277615&bkshp-astro=t";
 
+export const AMAZON_URL = "https://www.amazon.co.uk/Rainbow-Vote-LGBTQ-Voters-Ballot/dp/0691277591";
+
+export const PUP_URL = "https://press.princeton.edu/books/paperback/9780691277615/the-rainbow-vote";
+
+export const PUBLISHER_NAME = "Princeton University Press";
+
 export const PUB_DATE_DISPLAY = "February 2, 2027";
 export const PUB_DATE_ISO = "2027-02-02";
 
@@ -11,7 +17,7 @@ export const AUTHOR_NAME = "Stuart J. Turnbull-Dugarte";
 export const AUTHOR_WEBSITE = "https://www.turnbulldugarte.com";
 
 export const SHORT_DESCRIPTION =
-  "The Rainbow Vote shows that LGBTQ+ voters are a politically distinctive and electorally important constituency. More progressive, more engaged, and highly responsive to parties' positions on LGBTQ+ rights across contemporary European democracies, LGBTQ+ voters are not just a growing proportion of the electorate — they are also an increasingly powerful one.";
+  "shows that LGBTQ+ voters are a politically distinctive and electorally important constituency. More progressive, more engaged, and highly responsive to parties' positions on LGBTQ+ rights across contemporary European democracies, LGBTQ+ voters are not just a growing proportion of the electorate — they are also an increasingly powerful one.";
 
 export const LONG_DESCRIPTION_PARAGRAPHS = [
   "Who wins the vote of LGBTQ+ citizens on election day? This book explains why LGBTQ+ citizens have become an increasingly important electoral constituency in contemporary democracies. Drawing on evidence from Britain, Germany, Spain, Sweden, and Western Europe more broadly, it shows that Rainbow Voters are not simply another sociodemographic group within the population — they are a large, and growing, electorate with their own politically distinctive preferences, patterns of participation, and voting behaviour.",

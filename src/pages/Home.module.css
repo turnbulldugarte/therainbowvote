@@ -107,6 +107,27 @@
   margin-bottom: var(--space-2);
 }
 
+.midCtaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.annotatedButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35em;
+}
+
+.annotation {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: var(--step-2);
+  color: var(--pink);
+}
+
 @media (min-width: 640px) {
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -132,11 +153,18 @@
     grid-template-columns: repeat(4, 1fr);
   }
   .midCtaInner {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: space-between;
+    gap: var(--space-4);
+  }
+  .midCtaButtons {
+    justify-self: end;
   }
   .midCtaBody {
     margin-bottom: 0;
+  }
+  .annotation {
+    white-space: nowrap;
   }
 }

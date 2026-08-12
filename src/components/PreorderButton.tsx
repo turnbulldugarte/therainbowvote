@@ -6,6 +6,8 @@ type Props = {
   variant?: "primary" | "invert" | "ghost";
   size?: "default" | "sm";
   label?: string;
+  href?: string;
+  destinationName?: string;
   withIcon?: boolean;
   className?: string;
 };
@@ -14,6 +16,8 @@ export default function PreorderButton({
   variant = "primary",
   size = "default",
   label = "Pre-order from Gay’s the Word",
+  href = BOOKSHOP_URL,
+  destinationName = "Bookshop.org",
   withIcon = true,
   className = "",
 }: Props) {
@@ -23,11 +27,11 @@ export default function PreorderButton({
 
   return (
     <a
-      href={BOOKSHOP_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className={`btn ${variantClass} ${sizeClass} ${styles.preorder} ${className}`}
-      aria-label={`${label} — opens Bookshop.org in a new tab`}
+      aria-label={`${label} — opens ${destinationName} in a new tab`}
     >
       {withIcon && <IconBallot className={styles.icon} />}
       {label}

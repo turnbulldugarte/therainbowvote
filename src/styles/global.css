@@ -2,6 +2,7 @@
 @import "@fontsource-variable/inter/wght.css";
 @import "@fontsource/caveat/latin-400.css";
 @import "@fontsource/caveat/latin-600.css";
+@import "@fontsource/caveat/latin-700.css";
 @import "./tokens.css";
 
 *,
@@ -133,6 +134,13 @@ button:focus-visible {
 
 .bg-ink .btn:active {
   box-shadow: 2px 2px 0 var(--paper);
+}
+
+/* The ghost variant's ink text/border is invisible on an ink background — swap to
+   paper so it stays legible. */
+.bg-ink .btn-ghost {
+  color: var(--paper);
+  border-color: var(--paper);
 }
 
 ::selection {

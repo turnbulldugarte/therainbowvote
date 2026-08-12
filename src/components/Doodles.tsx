@@ -170,7 +170,12 @@ export function MarkerUnderline({ className, color }: { className?: string; colo
 /** Hand-drawn circle annotation, e.g. around "pre-order" callouts. */
 export function CircleMark({ className, title }: IconProps) {
   return (
-    <svg viewBox="0 0 200 90" className={className} role={title ? "img" : "presentation"} aria-hidden={title ? undefined : true}>
+    <svg
+      viewBox="0 0 200 90"
+      className={className}
+      role={title ? "img" : "presentation"}
+      aria-hidden={title ? undefined : true}
+    >
       {title && <title>{title}</title>}
       <path
         {...base}

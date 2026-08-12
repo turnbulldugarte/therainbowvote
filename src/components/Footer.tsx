@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 import PreorderButton from "./PreorderButton";
-import { AUTHOR_NAME, AUTHOR_WEBSITE, PUB_DATE_DISPLAY } from "../data/site";
+import {
+  AMAZON_URL,
+  AUTHOR_NAME,
+  AUTHOR_WEBSITE,
+  PUB_DATE_DISPLAY,
+  PUBLISHER_NAME,
+  PUP_URL,
+} from "../data/site";
 import { BallotCube } from "./Doodles";
 import styles from "./Footer.module.css";
 
@@ -14,9 +21,25 @@ export default function Footer() {
           <p className={styles.tagline}>
             How LGBTQ+ voters think, what they want, and how to win their ballot.
             <br />
-            By {AUTHOR_NAME}. Publishing {PUB_DATE_DISPLAY}.
+            By {AUTHOR_NAME}. Published by {PUBLISHER_NAME}. Publishing {PUB_DATE_DISPLAY}.
           </p>
-          <PreorderButton size="sm" variant="invert" />
+          <div className={styles.buttonRow}>
+            <PreorderButton size="sm" variant="invert" />
+            <PreorderButton
+              size="sm"
+              variant="ghost"
+              href={PUP_URL}
+              destinationName="Princeton University Press"
+              label="Pre-order from Princeton University Press"
+            />
+            <PreorderButton
+              size="sm"
+              variant="ghost"
+              href={AMAZON_URL}
+              destinationName="Amazon"
+              label="Pre-order on Amazon"
+            />
+          </div>
         </div>
 
         <nav className={styles.links} aria-label="Footer">

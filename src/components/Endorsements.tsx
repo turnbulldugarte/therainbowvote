@@ -1,5 +1,13 @@
+import { Fragment } from "react";
 import { useReveal } from "../hooks/useReveal";
 import styles from "./Endorsements.module.css";
+
+/** Italicises every mention of the book's title within a quote. */
+function withItalicTitle(text: string) {
+  return text.split(/(The Rainbow Vote)/g).map((part, i) =>
+    part === "The Rainbow Vote" ? <em key={i}>{part}</em> : <Fragment key={i}>{part}</Fragment>
+  );
+}
 
 const endorsements = [
   {
@@ -28,7 +36,7 @@ export default function Endorsements() {
         <figure key={e.name} className={styles.card} tabIndex={0}>
           <blockquote className={styles.quote}>
             <span className={styles.mark} aria-hidden="true">“</span>
-            {e.quote}
+            {withItalicTitle(e.quote)}
           </blockquote>
           <figcaption className={styles.caption}>
             <img src={e.photo} alt="" className={styles.photo} loading="lazy" width={72} height={72} />
