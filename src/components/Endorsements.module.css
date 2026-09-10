@@ -106,4 +106,8 @@
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }

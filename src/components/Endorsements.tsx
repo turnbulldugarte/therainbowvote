@@ -26,6 +26,13 @@ const endorsements = [
     book: "The Remarkable Rise of Transgender Rights",
     photo: "/media/haider-markel.webp",
   },
+  {
+    quote:
+      "Activists, parties, and LGBTQ+ communities have long understood something political science has been surprisingly slow to recognize: that LGBTQ+ voters are a sizeable and consequential electoral force - and their politics hold important lessons about participation, representation, and the stakes citizens attach to democracy. Stuart Turnbull-Dugarte has been at the forefront of bringing these questions into comparative political science, and The Rainbow Vote is the exciting culmination of a remarkable research agenda. Moving political behavior beyond its traditional foci, this ambitious and highly readable book reveals how queer identities shape political socialization, participation, partisanship, and electoral choice across European democracies (and often for the better!). But more than illuminating an overlooked electorate, Turnbull-Dugarte also beautifully demonstrates how studying marginalized voters changes what we know about political behavior itself. An important, field-shaping book.",
+    name: "Phillip M. Ayoub",
+    roleText: "Professor of Political Science, University College London",
+    photo: "/media/ayoub.webp",
+  },
 ];
 
 export default function Endorsements() {
@@ -42,10 +49,14 @@ export default function Endorsements() {
             <img src={e.photo} alt="" className={styles.photo} loading="lazy" width={72} height={72} />
             <div>
               <span className={styles.name}>{e.name}</span>
-              <span className={styles.role}>
-                {e.roleLead}
-                <em>{e.book}</em>
-              </span>
+              {"roleText" in e ? (
+                <span className={styles.role}>{e.roleText}</span>
+              ) : (
+                <span className={styles.role}>
+                  {e.roleLead}
+                  <em>{e.book}</em>
+                </span>
+              )}
             </div>
           </figcaption>
         </figure>
