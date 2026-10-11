@@ -1,7 +1,7 @@
 import PreorderButton from "../components/PreorderButton";
 import SectionHeader from "../components/SectionHeader";
 import PressLogos from "../components/PressLogos";
-import { IconStarburst, IconTrend } from "../components/Doodles";
+import { IconTrend } from "../components/Doodles";
 import { useReveal } from "../hooks/useReveal";
 import { AUTHOR_NAME, AUTHOR_WEBSITE } from "../data/site";
 import styles from "./Author.module.css";
@@ -10,27 +10,61 @@ export default function Author() {
   const introRef = useReveal<HTMLDivElement>();
   const bodyRef = useReveal<HTMLDivElement>();
   const pressRef = useReveal<HTMLDivElement>();
+  const labelRef = useReveal<HTMLSpanElement>();
 
   return (
     <>
       <section className="container">
         <div ref={introRef} className={`reveal ${styles.intro}`}>
-          <div className={styles.monogram}>
-            <img
-              src="/media/author-portrait.webp"
-              alt={`Portrait of ${AUTHOR_NAME}`}
+          <div className={styles.videoFrame}>
+            <video
+              src="/media/author_clip.mp4"
+              aria-label={`Video portrait of ${AUTHOR_NAME}`}
               className={styles.portrait}
-              width={634}
-              height={640}
+              width={720}
+              height={1280}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls
             />
-            <IconStarburst className={styles.star} />
           </div>
           <div>
-            <span className={`eyebrow ${styles.eyebrow}`}>About the author</span>
+            <span ref={labelRef} className={`eyebrow ${styles.eyebrow}`}>
+              About the author
+              <svg
+                className={styles.markerCircle}
+                viewBox="0 0 200 90"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 45 C 18 15, 60 6, 100 8 C 150 10, 185 22, 182 46 C 179 72, 130 84, 95 82 C 50 80, 22 68, 22 46"
+                  pathLength={1}
+                />
+              </svg>
+            </span>
             <h1 className={styles.name}>{AUTHOR_NAME}</h1>
             <p className={styles.role}>
-              Associate Professor, University of Southampton · PhD, King's College London
+              Associate Professor in Political Science, University of Southampton
             </p>
+            <div className={styles.bio}>
+              <p>
+                Born in South Africa, Stuart moved to Scotland with his family and spent
+                his teenage years in Fife. At the University of Glasgow, he started out
+                studying English Literature, realised it wasn’t quite for him, and
+                switched to History and Spanish.
+              </p>
+              <p>
+                His first job after university, an internship on a political campaign,
+                sparked a new direction. He studied European Politics part-time at the
+                University of Leicester while working as an English language teacher,
+                then went on to a PhD in Political Science at King’s College London.
+                Today, he’s an Associate Professor in Political Science at the
+                University of Southampton.
+              </p>
+            </div>
             <a
               href={AUTHOR_WEBSITE}
               target="_blank"
@@ -58,7 +92,7 @@ export default function Author() {
           <div className={styles.bodyMain}>
             <SectionHeader eyebrow="Research focus" title="Electoral behaviour, up close" />
             <p>
-              Stuart is an award-winning political scientist working on electoral behaviour
+              Stuart is an <strong className={styles.researchEmphasis}>award-winning political scientist</strong> working on electoral behaviour
               and identity politics, with a particular focus on the European context. The
               Rainbow Vote grows directly out of that research: original surveys of more than
               25,000 respondents, including 4,000+ LGBTQ+ individuals, combined with data

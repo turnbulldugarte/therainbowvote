@@ -65,6 +65,20 @@ export default function Chapters() {
   return (
     <>
       <section className="container">
+        <div className={styles.hero}>
+          <video
+            className={styles.heroVideo}
+            src="/media/chapter_hero.mp4"
+            aria-label="The Rainbow Vote chapter overview animation"
+            width={768}
+            height={480}
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+          />
+        </div>
         <div className={styles.intro}>
           <SectionHeader
             as="h1"
