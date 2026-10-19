@@ -1,7 +1,13 @@
+.overview {
+  display: grid;
+  gap: var(--space-4);
+  align-items: center;
+  padding-block: var(--space-5);
+}
+
 .hero {
-  margin-top: var(--space-5);
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  width: min(100%, 360px);
+  aspect-ratio: 8 / 5;
   background: var(--ink);
   border: 2.5px solid var(--ink);
   overflow: hidden;
@@ -17,7 +23,14 @@
 }
 
 .intro {
-  padding-top: var(--space-4);
+  min-width: 0;
+}
+
+@media (min-width: 860px) {
+  .overview {
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    gap: var(--space-5);
+  }
 }
 
 .grid {

@@ -88,6 +88,15 @@ export default function Author() {
       </section>
 
       <section className="container section">
+        <img
+          className={styles.mediaCollage}
+          src="/media/media-collage.webp"
+          alt="A collage of Stuart J. Turnbull-Dugarte’s media appearances"
+          width={2400}
+          height={1143}
+          loading="lazy"
+          decoding="async"
+        />
         <div ref={bodyRef} className={`reveal ${styles.body}`}>
           <div className={styles.bodyMain}>
             <SectionHeader eyebrow="Research focus" title="Electoral behaviour, up close" />

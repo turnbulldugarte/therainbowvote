@@ -101,6 +101,14 @@
   max-width: 16ch;
 }
 
+.mediaCollage {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-md);
+}
+
 .body {
   display: grid;
   gap: var(--space-5);

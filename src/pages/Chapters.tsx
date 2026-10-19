@@ -64,7 +64,7 @@ function ChapterModule({ chapter, span }: { chapter: Chapter; span: number }) {
 export default function Chapters() {
   return (
     <>
-      <section className="container">
+      <section className={`container ${styles.overview}`}>
         <div className={styles.hero}>
           <video
             className={styles.heroVideo}
