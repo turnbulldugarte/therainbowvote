@@ -101,7 +101,7 @@ export default function Chapters() {
         <div className={`container ${styles.ctaInner}`}>
           <h2 className={styles.ctaTitle}>Read the full argument.</h2>
           <p className={styles.ctaBody}>
-            Pre-order The Rainbow Vote from Gay's the Word, via Bookshop.org.
+            Pre-order The Rainbow Vote from Bookshop.org.
           </p>
           <PreorderButton variant="invert" />
         </div>

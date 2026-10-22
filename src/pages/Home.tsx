@@ -102,8 +102,8 @@ export default function Home() {
             pre-order.
           </h2>
           <p className={styles.midCtaBody}>
-            The Rainbow Vote is available to pre-order now from Gay's the Word bookshop
-            via Bookshop.org, or from Amazon.
+            The Rainbow Vote is available to pre-order now from Bookshop.org,
+            or from Amazon.
           </p>
           <div className={styles.midCtaButtons}>
             <div className={styles.annotatedButton}>

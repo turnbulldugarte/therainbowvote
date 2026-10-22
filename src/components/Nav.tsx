@@ -85,7 +85,7 @@ export default function Nav() {
           ))}
         </ul>
         <div className={styles.mobileCta}>
-          <PreorderButton label="Pre-order from Gay’s the Word" />
+          <PreorderButton />
         </div>
       </div>
     </header>

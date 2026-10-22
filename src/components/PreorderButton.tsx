@@ -15,7 +15,7 @@ type Props = {
 export default function PreorderButton({
   variant = "primary",
   size = "default",
-  label = "Pre-order from Gay’s the Word",
+  label = "Pre-order from Bookshop.org",
   href = BOOKSHOP_URL,
   destinationName = "Bookshop.org",
   withIcon = true,
